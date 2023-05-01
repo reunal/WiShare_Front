@@ -1,8 +1,9 @@
 import React from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import "./App.css";
 
-function App() {
-  return <div className="App"></div>;
-}
+const App = () => {
+  return <BrowserRouter>adsfasdfds</BrowserRouter>;
+};
 
 export default App;
