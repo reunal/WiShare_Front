@@ -1,9 +1,13 @@
 import React from "react";
-// import { Route, Routes, BrowserRouter } from "react-router-dom";
 import "./App.css";
+import Header from "./components/navbar/Header";
 
-const App = () => {
-  return <></>;
+const App = (): JSX.Element => {
+  return (
+    <>
+      <Header></Header>
+    </>
+  );
 };
 
 export default App;
