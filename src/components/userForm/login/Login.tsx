@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import { PageTitleEng } from "../../styles/CommonStyled";
-import { StyledLogin } from "../../styles/login/StyledLoginForm";
+import { PageTitleEng } from "../../../styles/CommonStyled";
+import { StyledLogin } from "../../../styles/login/StyledLoginForm";
 
 import LoginForm from "./LoginForm";
 

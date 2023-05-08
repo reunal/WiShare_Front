@@ -4,6 +4,7 @@ export const StyledLogin = styled.div`
   width: 100%;
   height: auto;
   margin-top: 10vh;
+  text-align: center;
 `;
 
 export const StyledLoginForm = styled.form`
@@ -24,5 +25,19 @@ export const LoginTextField = styled.input`
   :focus {
     outline: none;
     border-bottom: solid 1px #c8c8c8;
+  }
+`;
+
+export const LoginButton = styled.button`
+  width: 75px;
+  height: 36px;
+  border-radius: 30px;
+  color: #fff;
+  background: #ff5555;
+  font-size: 12px;
+  margin-top: 30px;
+
+  :hover {
+    background: #fa4158;
   }
 `;
