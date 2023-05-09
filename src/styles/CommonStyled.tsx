@@ -19,7 +19,7 @@ export const PageTitleKr = styled.h1`
 // CardBaseStyle
 export const CardBaseStyle = styled.div`
 	width: 100%;
-	height: 370px;
+	height: 380px;
 	background: #fff;
 	transition: all 0.3s;
 	margin-top: 30px;
