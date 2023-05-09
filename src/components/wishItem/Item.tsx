@@ -16,7 +16,7 @@ const Item = (): JSX.Element => {
 							<p>더 보기</p>
 						</div>
 						<div>
-							<h3>38,000원</h3>
+							<h3>34,000원</h3>
 						</div>
 					</StyledItemInfo>
 				</Grid>
