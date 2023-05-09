@@ -109,3 +109,73 @@ export const SendPresentCardStyled = styled(Box)`
 		padding: 0 2vw;
 	}
 `;
+
+// 받은 선물 배송지 관리 style
+export const StyledEnterAddress = styled.div`
+	width: 100%;
+
+	svg {
+		font-size: 1rem;
+	}
+`;
+
+export const EnterAddressBoxStyled = styled.div`
+	width: 80%;
+	margin: 0 auto;
+`;
+
+export const PresentDetailCardStyled = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 5vh 0;
+
+	img {
+		width: 30%;
+		height: 220px;
+	}
+
+	div {
+		p {
+			text-align: center;
+			margin-bottom: 1vh;
+		}
+	}
+`;
+
+export const EnterAddressForm = styled.div`
+	width: 100%;
+	margin-top: 2vh;
+
+	p {
+		font-size: 16px;
+		font-weight: 700;
+		margin-bottom: 1vh;
+	}
+
+	div {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		input {
+			width: 85%;
+			height: 35px;
+			border: 1px solid #dcdcdc;
+			border-radius: 5px;
+			padding: 0 10px;
+		}
+
+		button {
+			/* width: 10%; */
+			height: 35px;
+
+			background-color: black;
+			padding: 3px;
+			border-radius: 5px;
+			color: #ffffff;
+		}
+	}
+`;
