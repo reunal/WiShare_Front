@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import Header from './components/navbar/Header';
 import StyledContainer from './styles/StyledContainer';
+import ReceivedPresentDetail from './components/present/ReceivedPresentDetail';
 // import Login from "./components/userForm/Login";
-import Product from './components/productList/Product';
 
 const App = (): JSX.Element => {
 	return (
@@ -16,8 +16,7 @@ const App = (): JSX.Element => {
 				{/* <Login /> */}
 
 				{/* 회원가입 컴포넌트 */}
-
-				<Product />
+				<ReceivedPresentDetail />
 			</StyledContainer>
 		</>
 	);
