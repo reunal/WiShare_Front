@@ -32,3 +32,17 @@ button {
 button:hover {
   cursor: pointer;
 }
+
+.h90Line {
+  width: 1px;
+  height: 90%;
+  background: #e5e5e5;
+}
+
+.fl {
+  float:left;
+}
+
+.ml10 {
+  margin-left: 10px;
+}

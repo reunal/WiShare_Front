@@ -1,24 +1,34 @@
 import React from 'react';
-import { Grid } from '@mui/material';
 import { CardBaseStyle, ProductCardStyle } from '../../styles/CommonStyled';
+import noImage from '../../asset/images/noImage.jpeg';
 
-const Product = (): JSX.Element => {
+interface IProductType {
+	id: number;
+	img: string;
+	name: string;
+	brand: string;
+	price: number;
+	description: string;
+	wished: boolean;
+}
+
+const Product = (data: IProductType) => {
+	const { name, brand, price } = data;
+
 	return (
-		<Grid item xs={3}>
-			<CardBaseStyle>
-				<ProductCardStyle>
-					<img src="" alt="" title="" />
-					<div>
-						<p>Category</p>
-						<h6>MLB 캡모자</h6>
-					</div>
-					<div>
-						<h3>39,000</h3>
-						<button type="button">위시하기</button>
-					</div>
-				</ProductCardStyle>
-			</CardBaseStyle>
-		</Grid>
+		<CardBaseStyle>
+			<ProductCardStyle>
+				<img src={noImage} alt="noImage" title="noImage" />
+				<div>
+					<p>{brand}</p>
+					<h6>{name}</h6>
+				</div>
+				<div>
+					<h3>{price.toLocaleString()}</h3>
+					<button type="button">위시하기</button>
+				</div>
+			</ProductCardStyle>
+		</CardBaseStyle>
 	);
 };
 

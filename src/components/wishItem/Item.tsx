@@ -1,6 +1,8 @@
 import React from 'react';
-import { Grid } from '@mui/material';
-import { StyledWishItem, StyledItemInfo } from '../../styles/wishItem/StyledWishItem';
+import { Grid, Switch, FormControlLabel } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { StyledWishItem, StyledItemInfo, StyledButtons } from '../../styles/wishItem/StyledWishItem';
 
 const Item = (): JSX.Element => {
 	return (
@@ -21,7 +23,18 @@ const Item = (): JSX.Element => {
 					</StyledItemInfo>
 				</Grid>
 				<Grid item xs={2}>
-					switch button
+					<div className="h90Line fl ml10" />
+					<StyledButtons>
+						<FormControlLabel
+							value="공개여부"
+							control={<Switch color="primary" />}
+							label="공개여부"
+							labelPlacement="start"
+						/>
+						<IconButton aria-label="delete">
+							<DeleteIcon />
+						</IconButton>
+					</StyledButtons>
 				</Grid>
 			</Grid>
 		</StyledWishItem>

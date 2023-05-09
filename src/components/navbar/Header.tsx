@@ -2,9 +2,10 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { StyledHeader, Logo, LoginButton, JoinButton } from '../../styles/header/StyledHeader';
 import StyledContainer from '../../styles/StyledContainer';
+import Menu from './Menu';
 
 const Header = (): JSX.Element => {
-	const login = false;
+	const login = true;
 
 	return (
 		<StyledHeader>
@@ -17,7 +18,7 @@ const Header = (): JSX.Element => {
 
 					{/* Menu */}
 					<Grid item xs={8}>
-						{login ? <>menu</> : ''}
+						{login ? <Menu /> : ''}
 					</Grid>
 
 					{/* Login */}
