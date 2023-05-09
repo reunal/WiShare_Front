@@ -3,20 +3,31 @@ import { Grid } from '@mui/material';
 import { CardBaseStyle } from '../../styles/CommonStyled';
 import { PresentCardStyled } from '../../styles/present/StyledPresent';
 
-const Present = (): JSX.Element => {
+interface IProps {
+	item: {
+		id: number;
+		brand: string;
+		title: string;
+		sender: string;
+		date: string;
+	};
+}
+
+const Present = ({ item }: IProps): JSX.Element => {
+	const { brand, title, sender, date } = item;
 	return (
 		<Grid item xs={4}>
 			<CardBaseStyle>
 				<PresentCardStyled>
 					<img src="" alt="" title="" />
 					<div>
-						<p>MLB</p>
-						<h5>MLB 캡모자</h5>
+						<p>{brand}</p>
+						<h5>{title}</h5>
 					</div>
 					<div>
 						<h6>From</h6>
-						<span>모유진</span>
-						<p>2023.05.09</p>
+						<span>{sender}</span>
+						<p>{date}</p>
 					</div>
 				</PresentCardStyled>
 			</CardBaseStyle>

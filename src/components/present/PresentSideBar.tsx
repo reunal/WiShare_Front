@@ -9,7 +9,20 @@ import {
 } from '../../styles/present/StyledPresent';
 import logo from '../../logo.svg';
 
-const PresentSideBar = (): JSX.Element => {
+interface CheckProps {
+	check: boolean;
+	setCheck: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const PresentSideBar = ({ check, setCheck }: CheckProps) => {
+	const onChangeReceiveCheck = () => {
+		setCheck(true);
+	};
+
+	const onChangeSendCheck = () => {
+		setCheck(false);
+	};
+
 	return (
 		<Grid item xs={3}>
 			<StyledSideBar>
@@ -22,8 +35,12 @@ const PresentSideBar = (): JSX.Element => {
 				</StyledUserInfo>
 				<StyledPageChange>
 					<h3>선물함</h3>
-					<StyledPageChangeButton color="#ff5555">받은 선물</StyledPageChangeButton>
-					<StyledPageChangeButton>내가 준 선물</StyledPageChangeButton>
+					<StyledPageChangeButton color={check === true ? '#ff5555' : undefined} onClick={onChangeReceiveCheck}>
+						받은 선물
+					</StyledPageChangeButton>
+					<StyledPageChangeButton color={check === true ? undefined : '#ff5555'} onClick={onChangeSendCheck}>
+						내가 준 선물
+					</StyledPageChangeButton>
 				</StyledPageChange>
 			</StyledSideBar>
 		</Grid>

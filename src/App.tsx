@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/navbar/Header';
 import StyledContainer from './styles/StyledContainer';
-import ReceivedPresentDetail from './components/present/ReceivedPresentDetail';
+import PresentPage from './components/present/PresentPage';
 // import Login from "./components/userForm/Login";
 
 const App = (): JSX.Element => {
@@ -16,7 +16,7 @@ const App = (): JSX.Element => {
 				{/* <Login /> */}
 
 				{/* 회원가입 컴포넌트 */}
-				<ReceivedPresentDetail />
+				<PresentPage />
 			</StyledContainer>
 		</>
 	);
