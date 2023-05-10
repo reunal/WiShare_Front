@@ -18,7 +18,7 @@ const Product = (data: IProductType) => {
 	return (
 		<CardBaseStyle>
 			<ProductCardStyle>
-				<img src={noImage} alt="noImage" title="noImage" />
+				<img src={noImage} alt="no_Image" title="" />
 				<div>
 					<p>{brand}</p>
 					<h6>{name}</h6>

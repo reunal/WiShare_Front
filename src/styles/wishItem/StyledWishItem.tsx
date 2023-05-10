@@ -6,7 +6,7 @@ export const StyledWishItem = styled.div`
 	border: solid 1px #e5e5e5;
 	border-radius: 10px;
 	padding: 10px;
-	margin-top: 50px;
+	margin-top: 15px;
 `;
 
 export const StyledItemInfo = styled.div`

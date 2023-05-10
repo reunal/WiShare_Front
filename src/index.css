@@ -17,6 +17,10 @@
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --font-BebasNeue: "BebasNeue";
   --font-NotoSans: "Noto-Sans";

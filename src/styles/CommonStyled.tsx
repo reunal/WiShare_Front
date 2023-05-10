@@ -1,5 +1,19 @@
 import styled from 'styled-components';
 
+export const PageTitleHead = styled.div`
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	margin-top: 50px;
+`;
+
+export const PageBody = styled.div`
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+`;
+
 export const PageTitleEng = styled.h1`
 	font-family: var(--font-BebasNeue);
 	text-align: center;
