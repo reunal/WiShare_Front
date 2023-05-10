@@ -15,7 +15,9 @@ const Menu = (): JSX.Element => {
 				<Link to="/MyWish" aria-label="마이위시">
 					<li>마이위시</li>
 				</Link>
-				<li>선물함</li>
+				<Link to="/present" aria-label="마이위시">
+					<li>선물함</li>
+				</Link>
 				<li>마이프렌드</li>
 			</ul>
 		</StyledMenu>

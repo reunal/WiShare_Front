@@ -29,6 +29,7 @@ export const StyledMenu = styled.div`
 		line-height: 72px;
 		padding: 0 15px;
 		transition: all 0.2s;
+		color: black;
 	}
 
 	li:hover {

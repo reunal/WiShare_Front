@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Switch, FormControlLabel } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
-import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteIcon from '@material-ui/icons/Delete';
 import { StyledWishItem, StyledItemInfo, StyledButtons } from '../../styles/wishItem/StyledWishItem';
 import noImage from '../../asset/images/noImage.jpeg';
 
