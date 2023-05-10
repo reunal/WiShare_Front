@@ -10,6 +10,7 @@ import PresentPage from './components/present/PresentPage';
 // import Login from "./components/userForm/Login";
 import MyWiShPage from './pages/mywish/MyWishPage';
 import LoginPage from './pages/userForm/LoginPage';
+import ProductDetail from './components/productList/ProductDetail';
 
 const App = (): JSX.Element => {
 	return (
@@ -19,6 +20,7 @@ const App = (): JSX.Element => {
 			<Routes>
 				<Route element={<DefaultLayout />}>
 					<Route path="/" element={<ProductPage />} />
+					<Route path="/product/:id" element={<ProductDetail />} />
 					<Route path="/MyWish" element={<MyWiShPage />} />
 					<Route path="/Login" element={<LoginPage />} />
 					<Route path="/present/:id" element={<ReceivedPresentDetail />} />

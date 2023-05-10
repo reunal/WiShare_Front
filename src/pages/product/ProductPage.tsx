@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { PageTitleKr, PageBody, PageTitleHead } from '../../styles/CommonStyled';
 import ProductDummyData from '../../model/ProductDummyData';
 import FilterBtn from '../../components/productList/FilterBtn';
@@ -18,16 +19,18 @@ const ProductPage = (): JSX.Element => {
 						const { id, img, name, brand, price, description, wished } = data;
 						return (
 							<Grid item xs={3}>
-								<Product
-									key={id}
-									id={id}
-									img={img}
-									name={name}
-									brand={brand}
-									price={price}
-									description={description}
-									wished={wished}
-								/>
+								<Link to={`/product/${id}`}>
+									<Product
+										key={id}
+										id={id}
+										img={img}
+										name={name}
+										brand={brand}
+										price={price}
+										description={description}
+										wished={wished}
+									/>
+								</Link>
 							</Grid>
 						);
 					})}

@@ -38,6 +38,7 @@ export const CardBaseStyle = styled.div`
 	height: 380px;
 	background: #fff;
 	transition: all 0.3s;
+	color: black;
 	:hover {
 		box-shadow: 1px 3px 5px #e5e5e5;
 		cursor: pointer;
