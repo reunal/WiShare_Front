@@ -10,6 +10,7 @@ import PresentPage from './components/present/PresentPage';
 // import Login from "./components/userForm/Login";
 import MyWiShPage from './pages/mywish/MyWishPage';
 import LoginPage from './pages/userForm/LoginPage';
+import Join from './components/userForm/join/Join';
 
 const App = (): JSX.Element => {
 	return (
@@ -21,6 +22,7 @@ const App = (): JSX.Element => {
 					<Route path="/" element={<ProductPage />} />
 					<Route path="/MyWish" element={<MyWiShPage />} />
 					<Route path="/Login" element={<LoginPage />} />
+					<Route path="/Join" element={<Join />} />
 					<Route path="/present/:id" element={<ReceivedPresentDetail />} />
 					<Route path="/present" element={<PresentPage />} />
 				</Route>
