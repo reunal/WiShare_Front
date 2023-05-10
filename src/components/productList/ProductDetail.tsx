@@ -1,7 +1,10 @@
 import React from 'react';
 import { Grid } from '@mui/material';
+import { useLocation } from 'react-router-dom';
 
 const ProductDetail = (): JSX.Element => {
+	const location = useLocation();
+	const data = location.state?.data;
 	return (
 		<Grid container spacing={2}>
 			<Grid item xs />
