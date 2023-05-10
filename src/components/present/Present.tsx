@@ -1,7 +1,9 @@
 import React from 'react';
 import { Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { CardBaseStyle } from '../../styles/CommonStyled';
 import { PresentCardStyled } from '../../styles/present/StyledPresent';
+import logo from '../../logo.svg';
 
 interface IProps {
 	item: {
@@ -18,18 +20,20 @@ const Present = ({ item }: IProps): JSX.Element => {
 	return (
 		<Grid item xs={4}>
 			<CardBaseStyle>
-				<PresentCardStyled>
-					<img src="" alt="" title="" />
-					<div>
-						<p>{brand}</p>
-						<h5>{title}</h5>
-					</div>
-					<div>
-						<h6>From</h6>
-						<span>{sender}</span>
-						<p>{date}</p>
-					</div>
-				</PresentCardStyled>
+				<Link to={`/present/${item.id}`}>
+					<PresentCardStyled>
+						<img src={logo} alt="" title="" />
+						<div>
+							<p>{brand}</p>
+							<h5>{title}</h5>
+						</div>
+						<div>
+							<h6>From</h6>
+							<span>{sender}</span>
+							<p>{date}</p>
+						</div>
+					</PresentCardStyled>
+				</Link>
 			</CardBaseStyle>
 		</Grid>
 	);

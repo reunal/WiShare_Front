@@ -32,7 +32,7 @@ export const StyledPageChange = styled.div`
 
 export const StyledPageChangeButton = styled.button`
 	width: 100%;
-	height: 3vh;
+	height: 3.5vh;
 	transition: all 0.3s;
 	font-size: 14px;
 	text-align: start;
@@ -85,6 +85,7 @@ export const PresentCardStyled = styled.div`
 			margin-right: 5px;
 		}
 	}
+	color: black;
 `;
 
 // 보낸 선물 style
