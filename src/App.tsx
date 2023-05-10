@@ -11,6 +11,7 @@ import PresentPage from './components/present/PresentPage';
 import MyWiShPage from './pages/mywish/MyWishPage';
 import LoginPage from './pages/userForm/LoginPage';
 import Join from './components/userForm/join/Join';
+import ProductDetail from './components/productList/ProductDetail';
 
 const App = (): JSX.Element => {
 	return (
@@ -20,6 +21,7 @@ const App = (): JSX.Element => {
 			<Routes>
 				<Route element={<DefaultLayout />}>
 					<Route path="/" element={<ProductPage />} />
+					<Route path="/product/:id" element={<ProductDetail />} />
 					<Route path="/MyWish" element={<MyWiShPage />} />
 					<Route path="/Login" element={<LoginPage />} />
 					<Route path="/Join" element={<Join />} />
