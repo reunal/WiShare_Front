@@ -1,9 +1,12 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Grid, Button, ButtonGroup } from '@mui/material';
 import noImage from '../../asset/images/noImage.jpeg';
 import { DetailImage, DetailContent, DetailUnderLine } from '../../styles/product/StyledProduct';
 
 const ProductDetail = (): JSX.Element => {
+	const location = useLocation();
+	const data = location.state?.data;
 	return (
 		<Grid container spacing={2}>
 			<Grid item xs />

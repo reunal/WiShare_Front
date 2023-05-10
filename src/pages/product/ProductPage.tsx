@@ -19,7 +19,7 @@ const ProductPage = (): JSX.Element => {
 						const { id, img, name, brand, price, description, wished } = data;
 						return (
 							<Grid item xs={3}>
-								<Link to={`/product/${id}`}>
+								<Link to={`/product/${id}`} state={{ data }}>
 									<Product
 										key={id}
 										id={id}
