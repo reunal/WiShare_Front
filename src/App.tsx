@@ -1,25 +1,26 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import './App.css';
 import Header from './components/navbar/Header';
-import StyledContainer from './styles/StyledContainer';
-// import Login from "./components/userForm/Login";
-import Product from './components/productList/Product';
+import { DefaultLayout } from './components/Layout/DefaultLayOut';
+import ProductPage from './pages/product/ProductPage';
+import MyWiShPage from './pages/mywish/MyWishPage';
+import LoginPage from './pages/userForm/LoginPage';
 
 const App = (): JSX.Element => {
 	return (
-		<>
+		<BrowserRouter>
 			<Header />
 
-			{/* container : 1232px */}
-			<StyledContainer>
-				{/* 로그인 컴포넌트 */}
-				{/* <Login /> */}
-
-				{/* 회원가입 컴포넌트 */}
-
-				<Product />
-			</StyledContainer>
-		</>
+			<Routes>
+				<Route element={<DefaultLayout />}>
+					<Route path="/" element={<ProductPage />} />
+					<Route path="/MyWish" element={<MyWiShPage />} />
+					<Route path="/Login" element={<LoginPage />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
 	);
 };
 

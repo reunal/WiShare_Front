@@ -1,10 +1,12 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import { StyledHeader, Logo, LoginButton, JoinButton } from '../../styles/header/StyledHeader';
 import StyledContainer from '../../styles/StyledContainer';
+import Menu from './Menu';
 
 const Header = (): JSX.Element => {
-	const login = false;
+	const login = true;
 
 	return (
 		<StyledHeader>
@@ -17,12 +19,14 @@ const Header = (): JSX.Element => {
 
 					{/* Menu */}
 					<Grid item xs={8}>
-						{login ? <>menu</> : ''}
+						{login ? <Menu /> : ''}
 					</Grid>
 
 					{/* Login */}
 					<Grid item xs={2}>
-						<LoginButton color="#ff5555">로그인</LoginButton>
+						<Link to="/Login">
+							<LoginButton color="#ff5555">로그인</LoginButton>
+						</Link>
 						<JoinButton>회원가입</JoinButton>
 					</Grid>
 				</Grid>

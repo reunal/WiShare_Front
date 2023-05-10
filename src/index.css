@@ -17,6 +17,10 @@
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --font-BebasNeue: "BebasNeue";
   --font-NotoSans: "Noto-Sans";
@@ -31,4 +35,18 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+.h90Line {
+  width: 1px;
+  height: 90%;
+  background: #e5e5e5;
+}
+
+.fl {
+  float:left;
+}
+
+.ml10 {
+  margin-left: 10px;
 }

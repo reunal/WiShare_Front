@@ -1,5 +1,19 @@
 import styled from 'styled-components';
 
+export const PageTitleHead = styled.div`
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	margin-top: 50px;
+`;
+
+export const PageBody = styled.div`
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+`;
+
 export const PageTitleEng = styled.h1`
 	font-family: var(--font-BebasNeue);
 	text-align: center;
@@ -14,6 +28,8 @@ export const PageTitle = styled.h1`
 
 export const PageTitleKr = styled.h1`
 	font-family: var(--font-NotoSans);
+	font-size: 1.4rem;
+	display: inline-block;
 `;
 
 // CardBaseStyle
@@ -22,10 +38,9 @@ export const CardBaseStyle = styled.div`
 	height: 380px;
 	background: #fff;
 	transition: all 0.3s;
-	margin-top: 30px;
-
 	:hover {
 		box-shadow: 1px 3px 5px #e5e5e5;
+		cursor: pointer;
 	}
 `;
 
@@ -33,7 +48,6 @@ export const ProductCardStyle = styled.div`
 	img {
 		width: 100%;
 		height: 250px;
-		border-bottom: solid 1px red;
 	}
 
 	div {
