@@ -27,7 +27,9 @@ const Header = (): JSX.Element => {
 						<Link to="/Login">
 							<LoginButton color="#ff5555">로그인</LoginButton>
 						</Link>
-						<JoinButton>회원가입</JoinButton>
+						<Link to="/Join">
+							<JoinButton>회원가입</JoinButton>
+						</Link>
 					</Grid>
 				</Grid>
 			</StyledContainer>
