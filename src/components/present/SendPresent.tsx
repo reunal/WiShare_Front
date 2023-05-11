@@ -19,7 +19,7 @@ const SendPresent = ({ item }: IProps): JSX.Element => {
 			<Divider />
 			<div>
 				<h2>{title}</h2>
-				<h2>{price}</h2>
+				<h2>{price.toLocaleString()}원</h2>
 			</div>
 		</SendPresentCardStyled>
 	);
