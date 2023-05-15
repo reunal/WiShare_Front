@@ -38,18 +38,23 @@ export const PresentCardStyled = styled.div`
 	color: black;
 `;
 
+export const ReceivedListContainer = styled.div`
+	margin-top: 20px;
+`;
+
 // 보낸 선물 style
 export const SendPresentCardStyled = styled(Box)`
 	width: 100%;
-	height: 180px;
+	height: 150px;
 	margin-top: 2vh;
 	border: 1px solid #e5e5e5;
 	border-radius: 10px;
 	p {
 		height: 25%;
-		font-weight: 700;
-		font-size: 16px;
-		padding: 15px 20px 10px;
+		font-weight: normal;
+		font-size: 14px;
+		padding: 12px;
+		color: #333;
 	}
 
 	div {

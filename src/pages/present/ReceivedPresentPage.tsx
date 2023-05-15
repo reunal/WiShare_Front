@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import Present from './Present';
+import Present from '../../components/present/Present';
+import { ReceivedListContainer } from '../../styles/present/StyledPresent';
 
 const data = [
 	{
@@ -37,11 +38,13 @@ const ReceivedPresent = () => {
 	return (
 		<Grid item xs={9}>
 			<h1>4개의 선물</h1>
-			<Grid container spacing={3}>
-				{data.map((item) => {
-					return <Present item={item} key={item.id} />;
-				})}
-			</Grid>
+			<ReceivedListContainer>
+				<Grid container spacing={2}>
+					{data.map((item) => {
+						return <Present item={item} key={item.id} />;
+					})}
+				</Grid>
+			</ReceivedListContainer>
 		</Grid>
 	);
 };

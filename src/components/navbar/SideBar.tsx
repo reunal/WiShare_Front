@@ -1,28 +1,13 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import {
-	StyledSideBar,
-	StyledUserInfo,
-	StyledIconImage,
-	StyledPageChange,
-	StyledPageChangeButton,
-} from '../../styles/CommonStyled';
+import { StyledSideBar, StyledUserInfo, StyledIconImage, StyledPageChange } from '../../styles/CommonStyled';
 import logo from '../../logo.svg';
 
-interface CheckProps {
-	check: boolean;
-	setCheck: React.Dispatch<React.SetStateAction<boolean>>;
-}
+type SideBarProps = {
+	children: React.ReactNode;
+};
 
-const SideBar = ({ check, setCheck }: CheckProps) => {
-	const onChangeReceiveCheck = () => {
-		setCheck(true);
-	};
-
-	const onChangeSendCheck = () => {
-		setCheck(false);
-	};
-
+const SideBar = ({ children }: SideBarProps) => {
 	return (
 		<Grid item xs={3}>
 			<StyledSideBar>
@@ -33,15 +18,7 @@ const SideBar = ({ check, setCheck }: CheckProps) => {
 						<p>11월 7일</p>
 					</div>
 				</StyledUserInfo>
-				<StyledPageChange>
-					<h3>선물함</h3>
-					<StyledPageChangeButton color={check === true ? '#ff5555' : undefined} onClick={onChangeReceiveCheck}>
-						받은 선물
-					</StyledPageChangeButton>
-					<StyledPageChangeButton color={check === true ? undefined : '#ff5555'} onClick={onChangeSendCheck}>
-						내가 준 선물
-					</StyledPageChangeButton>
-				</StyledPageChange>
+				<StyledPageChange>{children}</StyledPageChange>
 			</StyledSideBar>
 		</Grid>
 	);

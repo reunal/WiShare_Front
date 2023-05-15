@@ -6,7 +6,7 @@ import Header from './components/navbar/Header';
 import ProductPage from './pages/product/ProductPage';
 import { DefaultLayout } from './components/Layout/DefaultLayout';
 import ReceivedPresentDetail from './components/present/ReceivedPresentDetail';
-import PresentPage from './components/present/PresentPage';
+import PresentPage from './pages/present/PresentPage';
 // import Login from "./components/userForm/Login";
 import MyWiShPage from './pages/mywish/MyWishPage';
 import LoginPage from './pages/userForm/LoginPage';

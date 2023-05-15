@@ -1,13 +1,6 @@
 import React from 'react';
-import { Grid } from '@mui/material';
-import {
-	StyledSideBar,
-	StyledUserInfo,
-	StyledIconImage,
-	StyledPageChange,
-	StyledPageChangeButton,
-} from '../../styles/CommonStyled';
-import logo from '../../logo.svg';
+import { StyledPageChangeButton } from '../../styles/CommonStyled';
+import SideBar from '../navbar/SideBar';
 
 interface CheckProps {
 	check: boolean;
@@ -24,26 +17,15 @@ const PresentSideBar = ({ check, setCheck }: CheckProps) => {
 	};
 
 	return (
-		<Grid item xs={3}>
-			<StyledSideBar>
-				<StyledUserInfo>
-					<StyledIconImage src={logo} />
-					<div>
-						<h2>모유진</h2>
-						<p>11월 7일</p>
-					</div>
-				</StyledUserInfo>
-				<StyledPageChange>
-					<h3>선물함</h3>
-					<StyledPageChangeButton color={check === true ? '#ff5555' : undefined} onClick={onChangeReceiveCheck}>
-						받은 선물
-					</StyledPageChangeButton>
-					<StyledPageChangeButton color={check === true ? undefined : '#ff5555'} onClick={onChangeSendCheck}>
-						내가 준 선물
-					</StyledPageChangeButton>
-				</StyledPageChange>
-			</StyledSideBar>
-		</Grid>
+		<SideBar>
+			<h3>선물함</h3>
+			<StyledPageChangeButton color={check === true ? '#ff5555' : undefined} onClick={onChangeReceiveCheck}>
+				받은 선물
+			</StyledPageChangeButton>
+			<StyledPageChangeButton color={check === true ? undefined : '#ff5555'} onClick={onChangeSendCheck}>
+				내가 준 선물
+			</StyledPageChangeButton>
+		</SideBar>
 	);
 };
 
