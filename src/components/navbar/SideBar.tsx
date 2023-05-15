@@ -14,7 +14,7 @@ interface CheckProps {
 	setCheck: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const PresentSideBar = ({ check, setCheck }: CheckProps) => {
+const SideBar = ({ check, setCheck }: CheckProps) => {
 	const onChangeReceiveCheck = () => {
 		setCheck(true);
 	};
@@ -47,4 +47,4 @@ const PresentSideBar = ({ check, setCheck }: CheckProps) => {
 	);
 };
 
-export default PresentSideBar;
+export default SideBar;
