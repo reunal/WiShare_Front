@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { PageTitleEng, PageTitleKr } from '../../../styles/CommonStyled';
 import { StyledLogin } from '../../../styles/login/StyledLoginForm';
 import { StyledRegisterButton } from '../../../styles/join/StyledJoin';
@@ -16,14 +17,18 @@ const Join = (): JSX.Element => {
 				</Grid>
 				<Grid container item spacing={3} justifyContent="center" alignItems="center">
 					<Grid item xs={4}>
-						<StyledRegisterButton color="#ff5555">
-							<PageTitleKr>일반사용자 가입</PageTitleKr>
-						</StyledRegisterButton>
+						<Link to="signUp">
+							<StyledRegisterButton color="#ff5555">
+								<PageTitleKr>일반사용자 가입</PageTitleKr>
+							</StyledRegisterButton>
+						</Link>
 					</Grid>
 					<Grid item xs={4}>
-						<StyledRegisterButton>
-							<PageTitleKr>마켓 등록</PageTitleKr>
-						</StyledRegisterButton>
+						<Link to="signUp/seller">
+							<StyledRegisterButton>
+								<PageTitleKr>마켓 등록</PageTitleKr>
+							</StyledRegisterButton>
+						</Link>
 					</Grid>
 				</Grid>
 			</Grid>
