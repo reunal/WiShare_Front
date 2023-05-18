@@ -12,7 +12,7 @@ import MyWiShPage from './pages/mywish/MyWishPage';
 import LoginPage from './pages/userForm/LoginPage';
 import Join from './components/userForm/join/Join';
 import ProductDetail from './components/productList/ProductDetail';
-import UserRegister from './components/userForm/join/UserRegister';
+import UserJoin from './components/userForm/join/UserJoin';
 
 const App = (): JSX.Element => {
 	return (
@@ -28,8 +28,8 @@ const App = (): JSX.Element => {
 					<Route path="/Join" element={<Join />} />
 					<Route path="/present/:id" element={<ReceivedPresentDetail />} />
 					<Route path="/present" element={<PresentPage />} />
-					<Route path="/signUp" element={<UserRegister />} />
-					<Route path="/signUp/seller" element={<UserRegister />} />
+					<Route path="/signUp" element={<UserJoin />} />
+					<Route path="/signUp/seller" element={<UserJoin />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

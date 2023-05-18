@@ -17,14 +17,14 @@ const Join = (): JSX.Element => {
 				</Grid>
 				<Grid container item spacing={3} justifyContent="center" alignItems="center">
 					<Grid item xs={4}>
-						<Link to="signUp">
+						<Link to="/signUp">
 							<StyledRegisterButton color="#ff5555">
 								<PageTitleKr>일반사용자 가입</PageTitleKr>
 							</StyledRegisterButton>
 						</Link>
 					</Grid>
 					<Grid item xs={4}>
-						<Link to="signUp/seller">
+						<Link to="/signUp/seller">
 							<StyledRegisterButton>
 								<PageTitleKr>마켓 등록</PageTitleKr>
 							</StyledRegisterButton>
