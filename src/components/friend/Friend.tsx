@@ -9,7 +9,7 @@ interface IFriendType {
 		id: number;
 		name: string;
 		birthday: string;
-		wishList: any;
+		wishList: object;
 		gender: string;
 		friendActive: boolean;
 	};
