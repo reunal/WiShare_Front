@@ -11,6 +11,7 @@ export const FilterSelector = styled.select`
 	float: right;
 `;
 
+// 제품 상세보기 페이지
 export const DetailImage = styled.div`
 	margin-top: 100px;
 	width: 100%;
@@ -24,7 +25,7 @@ export const DetailImage = styled.div`
 `;
 
 export const DetailContent = styled.div`
-	margin-top: 150px;
+	margin-top: 100px;
 	h3 {
 		font-size: 24px;
 		color: #333;
@@ -37,7 +38,7 @@ export const DetailContent = styled.div`
 
 	h2 {
 		font-size: 30px;
-		margin-top: 50px;
+		margin-top: 30px;
 	}
 
 	div {
@@ -49,4 +50,18 @@ export const DetailUnderLine = styled.div`
 	width: 100%;
 	height: 1px;
 	background: #e5e5e5;
+`;
+
+export const DetailBtnGroup = styled.div`
+	padding-top: 30px;
+
+	button {
+		padding: 10px 20px;
+		border: solid 1px red;
+		border-radius: 5px;
+	}
+
+	button:last-child {
+		margin-left: 10px;
+	}
 `;

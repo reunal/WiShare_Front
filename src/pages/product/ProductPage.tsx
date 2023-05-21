@@ -16,7 +16,7 @@ const ProductPage = (): JSX.Element => {
 			<PageBody>
 				<Grid container spacing={2}>
 					{ProductDummyData.map((data) => {
-						const { id, img, name, brand, price, description, wished } = data;
+						const { id, img, name, brand, price, description, wished, inventory } = data;
 						return (
 							<Grid item xs={3}>
 								<Link to={`/product/${id}`} state={{ data }}>
@@ -29,6 +29,7 @@ const ProductPage = (): JSX.Element => {
 										price={price}
 										description={description}
 										wished={wished}
+										inventory={inventory}
 									/>
 								</Link>
 							</Grid>

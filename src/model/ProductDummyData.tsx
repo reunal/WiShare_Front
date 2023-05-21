@@ -7,6 +7,7 @@ const ProductDummyData = [
 		price: 39000,
 		description: '꽤 괜찮은 모자',
 		wished: false,
+		inventory: 10,
 	},
 	{
 		id: 2,
@@ -16,6 +17,7 @@ const ProductDummyData = [
 		price: 79000,
 		description: '꽤 괜찮은 후드티',
 		wished: false,
+		inventory: 50,
 	},
 	{
 		id: 3,
@@ -25,6 +27,7 @@ const ProductDummyData = [
 		price: 200000,
 		description: '애플에서 출시한 에이팟 프로3',
 		wished: false,
+		inventory: 2500,
 	},
 	{
 		id: 4,
@@ -34,6 +37,7 @@ const ProductDummyData = [
 		price: 700,
 		description: '먹으면 속 풀림',
 		wished: false,
+		inventory: 5000,
 	},
 	{
 		id: 5,
@@ -43,6 +47,7 @@ const ProductDummyData = [
 		price: 4500,
 		description: '너무 써',
 		wished: false,
+		inventory: 10,
 	},
 	{
 		id: 6,
@@ -52,6 +57,7 @@ const ProductDummyData = [
 		price: 20000,
 		description: '너무 비싸',
 		wished: false,
+		inventory: 3,
 	},
 ];
 
