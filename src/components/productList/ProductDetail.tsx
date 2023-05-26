@@ -1,12 +1,18 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import WestIcon from '@material-ui/icons/ArrowBack';
 import { Grid } from '@mui/material';
 import noImage from '../../asset/images/noImage.jpeg';
-import { DetailImage, DetailContent, DetailUnderLine, DetailBtnGroup } from '../../styles/product/StyledProduct';
+import { DetailImage, DetailContent, DetailUnderLine, DetailBtnGroup, Back } from '../../styles/product/StyledProduct';
 
 const ProductDetail = () => {
 	const location = useLocation();
 	const data = location.state?.data;
+	const navigate = useNavigate();
+
+	const onBack = () => {
+		navigate(-1);
+	};
 
 	const { name, brand, price, inventory } = data;
 
@@ -14,6 +20,11 @@ const ProductDetail = () => {
 		<Grid container spacing={2}>
 			<Grid item xs={2} />
 			<Grid item xs={4}>
+				<Back>
+					<button type="button" onClick={onBack}>
+						<WestIcon /> 목록
+					</button>
+				</Back>
 				<DetailImage>
 					<img src={noImage} alt="" />
 				</DetailImage>
