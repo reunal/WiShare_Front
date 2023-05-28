@@ -3,14 +3,9 @@ import { Grid } from '@mui/material';
 import { Divider } from '@material-ui/core';
 import WestIcon from '@material-ui/icons/ArrowBack';
 import { useNavigate, useParams } from 'react-router-dom';
-import {
-	EnterAddressBoxStyled,
-	EnterAddressForm,
-	PresentDetailCardStyled,
-	StyledEnterAddress,
-	StyledPresent,
-} from '../../styles/present/StyledPresent';
+import { EnterAddressBoxStyled, EnterAddressForm, StyledPresent } from '../../styles/present/StyledPresent';
 import logo from '../../logo.svg';
+import { BrandText, NameText, SmallTitleText, StyledDetailCard, StyledDetailItemInfo } from '../../styles/CommonStyled';
 
 const data = [
 	{
@@ -56,29 +51,29 @@ const ReceivedPresentDetail = (): JSX.Element => {
 			<Grid container spacing={3} direction="row" justifyContent="center" alignItems="center">
 				<Grid item xs={2} />
 				<Grid item xs={8}>
-					<StyledEnterAddress>
+					<StyledDetailCard>
 						<button type="button" onClick={onBack}>
 							<WestIcon /> 목록
 						</button>
 						<EnterAddressBoxStyled>
-							<PresentDetailCardStyled>
+							<StyledDetailItemInfo>
 								<h2>{data[Number(id) - 1].sender} 님의 선물</h2>
 								<img src={logo} alt="" title="" />
 								<div>
-									<p>{data[Number(id) - 1].brand}</p>
-									<h2>{data[Number(id) - 1].title}</h2>
+									<BrandText>{data[Number(id) - 1].brand}</BrandText>
+									<NameText>{data[Number(id) - 1].title}</NameText>
 								</div>
-							</PresentDetailCardStyled>
+							</StyledDetailItemInfo>
 							<Divider />
 							<EnterAddressForm>
-								<p>배송지</p>
+								<SmallTitleText>배송지</SmallTitleText>
 								<div>
 									<input type="text" placeholder="주소를 입력해주세요" />
 									<button type="button">배송지 수정</button>
 								</div>
 							</EnterAddressForm>
 						</EnterAddressBoxStyled>
-					</StyledEnterAddress>
+					</StyledDetailCard>
 				</Grid>
 				<Grid item xs={2} />
 			</Grid>

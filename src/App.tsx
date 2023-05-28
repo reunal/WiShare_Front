@@ -13,6 +13,9 @@ import LoginPage from './pages/userForm/LoginPage';
 import Join from './components/userForm/join/Join';
 import ProductDetail from './components/productList/ProductDetail';
 import UserJoin from './components/userForm/join/UserJoin';
+import SoldProductDetail from './components/market/SoldProductDetail';
+import MarketPage from './pages/market/MarketPage';
+import SalesProductDetail from './components/market/SalesProductDetail';
 
 const App = (): JSX.Element => {
 	return (
@@ -30,6 +33,9 @@ const App = (): JSX.Element => {
 					<Route path="/present" element={<PresentPage />} />
 					<Route path="/signUp" element={<UserJoin />} />
 					<Route path="/signUp/seller" element={<UserJoin />} />
+					<Route path="/market" element={<MarketPage />} />
+					<Route path="/salesList/:id" element={<SalesProductDetail />} />
+					<Route path="/soldList/:id" element={<SoldProductDetail />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

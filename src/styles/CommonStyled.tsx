@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface SmallTitleTextProps {
+	weight?: number;
+}
+
 export const PageTitleHead = styled.div`
 	display: inline-block;
 	width: 100%;
@@ -140,4 +144,62 @@ export const StyledIconImage = styled.img`
 	height: 70px;
 	background-color: #d9d9d9;
 	border-radius: 50%;
+`;
+
+// 상품명과 브랜드 이름 css
+// 이름 수정해야 함
+export const NameText = styled.p`
+	font-size: 22px;
+	font-weight: 700;
+	/* 원하는 스타일 추가 */
+`;
+
+export const BrandText = styled.h6`
+	font-size: 14px;
+	color: #666666;
+	/* 원하는 스타일 추가 */
+`;
+
+export const SmallTitleText = styled.p`
+	font-size: 16px;
+	font-weight: 700;
+
+	font-weight: ${({ weight }: SmallTitleTextProps) => {
+		return weight || 700;
+	}};
+`;
+
+export const SmallNameText = styled.p`
+	font-size: 14px;
+	font-weight: 700;
+`;
+
+// 이름 수정해야 함
+// 판매된 상품 상태 수정, 상세보기, 선불 배송지 입력 Form
+export const StyledDetailCard = styled.div`
+	width: 100%;
+
+	svg {
+		font-size: 1rem;
+	}
+`;
+
+export const StyledDetailItemInfo = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 5vh 0;
+
+	img {
+		width: 30%;
+		height: 220px;
+	}
+
+	div {
+		h6 {
+			text-align: center;
+		}
+	}
 `;
