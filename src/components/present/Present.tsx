@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { CardBaseStyle } from '../../styles/CommonStyled';
+import { BrandText, CardBaseStyle, SmallTitleText } from '../../styles/CommonStyled';
 import { PresentCardStyled } from '../../styles/present/StyledPresent';
 import logo from '../../logo.svg';
 
@@ -24,13 +24,12 @@ const Present = ({ item }: IProps): JSX.Element => {
 					<PresentCardStyled>
 						<img src={logo} alt="" title="" />
 						<div>
-							<p>{brand}</p>
-							<h5>{title}</h5>
+							<BrandText>{brand}</BrandText>
+							<SmallTitleText>{title}</SmallTitleText>
 						</div>
 						<div>
-							<h6>From</h6>
-							<span>{sender}</span>
-							<p>{date}</p>
+							<SmallTitleText>From. {sender}</SmallTitleText>
+							<BrandText>{date}</BrandText>
 						</div>
 					</PresentCardStyled>
 				</Link>

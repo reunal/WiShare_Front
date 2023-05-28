@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import SendPresent from './SendPresent';
+import SendPresent from '../../components/present/SendPresent';
 
 const data = [
 	{

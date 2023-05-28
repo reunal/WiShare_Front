@@ -24,7 +24,7 @@ const Product = (data: IProductType) => {
 					<h6>{name}</h6>
 				</div>
 				<div>
-					<h3>{price.toLocaleString()}</h3>
+					<h3>{price.toLocaleString()}원</h3>
 					<button type="button">위시하기</button>
 				</div>
 			</ProductCardStyle>

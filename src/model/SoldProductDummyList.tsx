@@ -1,0 +1,36 @@
+const SoldDummyData = [
+	{
+		id: 1,
+		img: '',
+		name: 'MLB 모자',
+		brand: 'MLB',
+		category: '모자',
+		price: 20000,
+		quantity: 1,
+		purchaser: '모유진',
+		address: '경상북도 구미시 대학로 61 금오공과대학교',
+		orderNumber: 312653,
+		viewCnt: 50,
+		like: 50,
+		entered: false,
+		date: '2023-04-07',
+	},
+	{
+		id: 2,
+		img: '',
+		name: 'MLB 캡 모자',
+		brand: 'MLB',
+		category: '모자',
+		price: 20000,
+		quantity: 2,
+		purchaser: '강수성',
+		address: '경상북도 구미시 대학로 61 금오공과대학교',
+		orderNumber: 312654,
+		viewCnt: 40,
+		like: 70,
+		entered: true,
+		date: '2023-04-08',
+	},
+];
+
+export default SoldDummyData;

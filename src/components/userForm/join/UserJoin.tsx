@@ -2,9 +2,9 @@ import { Grid } from '@material-ui/core';
 import React from 'react';
 import { PageTitleEng } from '../../../styles/CommonStyled';
 import { StyledJoin } from '../../../styles/join/StyledJoin';
-import UserRegisterForm from './UserRegisterForm';
+import UserJoinForm from './UserJoinForm';
 
-const UserRegister = (): JSX.Element => {
+const UserJoinUp = (): JSX.Element => {
 	return (
 		<div>
 			<Grid container spacing={3} direction="column" justifyContent="center" alignItems="center">
@@ -12,7 +12,7 @@ const UserRegister = (): JSX.Element => {
 				<Grid item xs={6}>
 					<StyledJoin>
 						<PageTitleEng>WISHARE : 일반 회원가입</PageTitleEng>
-						<UserRegisterForm />
+						<UserJoinForm />
 					</StyledJoin>
 				</Grid>
 			</Grid>
@@ -20,4 +20,4 @@ const UserRegister = (): JSX.Element => {
 	);
 };
 
-export default UserRegister;
+export default UserJoinUp;

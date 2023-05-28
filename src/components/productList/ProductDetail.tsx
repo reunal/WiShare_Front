@@ -7,6 +7,9 @@ import { DetailImage, DetailContent, DetailUnderLine } from '../../styles/produc
 const ProductDetail = (): JSX.Element => {
 	const location = useLocation();
 	const data = location.state?.data;
+
+	const { name, brand, price } = data;
+
 	return (
 		<Grid container spacing={2}>
 			<Grid item xs />
@@ -17,10 +20,10 @@ const ProductDetail = (): JSX.Element => {
 			</Grid>
 			<Grid item xs={5}>
 				<DetailContent>
-					<h3>MLB 캡 모자</h3>
-					<p>MLB</p>
+					<h3>{name}</h3>
+					<p>{brand}</p>
 
-					<h2>39,000 원</h2>
+					<h2>{price.toLocaleString()}원</h2>
 					<DetailUnderLine />
 					<div>
 						<ButtonGroup>

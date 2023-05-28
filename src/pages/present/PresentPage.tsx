@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Grid } from '@material-ui/core';
-import PresentSideBar from './PresentSideBar';
+import PresentSideBar from '../../components/present/PresentSideBar';
 import { StyledPresent } from '../../styles/present/StyledPresent';
 import ReceivedPresent from './ReceivedPresentPage';
 import SentPresentPage from './SentPresentPage';

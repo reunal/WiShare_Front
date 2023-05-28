@@ -9,7 +9,7 @@ const Menu = (): JSX.Element => {
 				<Link to="/" aria-label="마켓">
 					<li>홈</li>
 				</Link>
-				<Link to="/" aria-label="마켓">
+				<Link to="/market" aria-label="마켓">
 					<li>마켓</li>
 				</Link>
 				<Link to="/MyWish" aria-label="마이위시">
