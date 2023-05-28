@@ -7,7 +7,7 @@ export const StyledLogin = styled.div`
 	text-align: center;
 `;
 
-export const StyledLoginForm = styled.form`
+export const StyledLoginForm = styled.div`
 	margin-top: 30px;
 `;
 
