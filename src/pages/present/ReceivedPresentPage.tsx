@@ -34,7 +34,7 @@ const data = [
 	},
 ];
 
-const ReceivedPresent = () => {
+const ReceivedPresentPage = () => {
 	return (
 		<Grid item xs={9}>
 			<h1>4개의 선물</h1>
@@ -49,4 +49,4 @@ const ReceivedPresent = () => {
 	);
 };
 
-export default ReceivedPresent;
+export default ReceivedPresentPage;

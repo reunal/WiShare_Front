@@ -10,6 +10,7 @@ interface IProductType {
 	price: number;
 	description: string;
 	wished: boolean;
+	inventory: number;
 }
 
 const Product = (data: IProductType) => {

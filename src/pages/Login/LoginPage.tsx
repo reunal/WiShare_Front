@@ -1,11 +1,11 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import { PageTitleEng } from '../../../styles/CommonStyled';
-import { StyledLogin } from '../../../styles/login/StyledLoginForm';
+import { PageTitleEng } from '../../styles/CommonStyled';
+import { StyledLogin } from '../../styles/login/StyledLoginForm';
 
-import LoginForm from './LoginForm';
+import LoginForm from '../../components/userForm/login/LoginForm';
 
-const Login = (): JSX.Element => {
+const LoginPage = (): JSX.Element => {
 	return (
 		<Grid container spacing={3}>
 			<Grid item xs />
@@ -20,4 +20,4 @@ const Login = (): JSX.Element => {
 	);
 };
 
-export default Login;
+export default LoginPage;

@@ -16,6 +16,7 @@ import UserJoin from './components/userForm/join/UserJoin';
 import SoldProductDetail from './components/market/SoldProductDetail';
 import MarketPage from './pages/market/MarketPage';
 import SalesProductDetail from './components/market/SalesProductDetail';
+import FriendPage from './pages/friend/FriendPage';
 
 const App = (): JSX.Element => {
 	return (
@@ -36,6 +37,7 @@ const App = (): JSX.Element => {
 					<Route path="/market" element={<MarketPage />} />
 					<Route path="/salesList/:id" element={<SalesProductDetail />} />
 					<Route path="/soldList/:id" element={<SoldProductDetail />} />
+					<Route path="/friend" element={<FriendPage />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
