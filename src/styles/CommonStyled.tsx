@@ -25,6 +25,12 @@ export const PageTitleEng = styled.h1`
 	font-size: 50px;
 `;
 
+export const PageTitleEng30 = styled.h1`
+	font-family: var(--font-BebasNeue);
+	text-align: center;
+	font-size: 30px;
+`;
+
 export const PageTitle = styled.h1`
 	letter-spacing: 2px;
 	font-size: 50px;
