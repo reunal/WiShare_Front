@@ -9,7 +9,6 @@ export const StyledJoin = styled.div`
 	width: 100%;
 	height: auto;
 	margin-top: 5vh;
-	text-align: center;
 `;
 
 export const StyledRegisterButton = styled.button`
@@ -55,6 +54,7 @@ export const RegisterTextField = styled.input`
 	font-family: var(--font-NotoSans);
 	width: 100%;
 	height: 45px;
-	padding: 20px 0;
+	padding: 20px 11px;
 	border: 1px solid #e5e5e5;
+	border-radius: 5px;
 `;
