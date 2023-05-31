@@ -14,6 +14,7 @@ import UserRegisterPage from './pages/join/UserRegisterPage';
 import Join from './pages/join/JoinPage';
 import ProductDetail from './components/productList/ProductDetail';
 import FriendPage from './pages/friend/FriendPage';
+import FriendDetail from './components/friend/FriendDetail';
 
 const App = (): JSX.Element => {
 	return (
@@ -31,6 +32,7 @@ const App = (): JSX.Element => {
 					<Route path="/present/:id" element={<ReceivedPresentDetail />} />
 					<Route path="/present" element={<PresentPage />} />
 					<Route path="/friend" element={<FriendPage />} />
+					<Route path="/friend/:id" element={<FriendDetail />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

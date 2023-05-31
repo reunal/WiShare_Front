@@ -6,7 +6,7 @@ import { FriendCard } from '../../styles/friend/StyledFriend';
 import noImage from '../../asset/images/noImage.jpeg';
 
 interface IFriendType {
-	item: {
+	data: {
 		id: number;
 		name: string;
 		birthday: string;
@@ -16,12 +16,12 @@ interface IFriendType {
 	};
 }
 
-const Friend = ({ item }: IFriendType) => {
-	const { name, birthday } = item;
+const Friend = ({ data }: IFriendType) => {
+	const { name, birthday } = data;
 
 	return (
 		<Grid item xs={4}>
-			<Link to={`/Friend/${item.id}`}>
+			<Link to={`/Friend/${data.id}`}>
 				<FriendCard>
 					<div>
 						<img src={noImage} alt="noImage" title="noImage" />
