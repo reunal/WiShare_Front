@@ -11,8 +11,8 @@ const FriendListPage = (): JSX.Element => {
 				<Grid container spacing={2}>
 					{FriendDummyData.filter((data) => {
 						return data.friendActive === true;
-					}).map((item) => {
-						return <Friend item={item} key={item.id} />;
+					}).map((data) => {
+						return <Friend data={data} key={data.id} />;
 					})}
 				</Grid>
 			</div>

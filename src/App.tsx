@@ -18,6 +18,7 @@ import SoldProductDetail from './components/market/SoldProductDetail';
 import MarketPage from './pages/market/MarketPage';
 import SalesProductDetail from './components/market/SalesProductDetail';
 import FriendPage from './pages/friend/FriendPage';
+import FriendDetail from './components/friend/FriendDetail';
 
 const App = (): JSX.Element => {
 	return (
@@ -40,6 +41,7 @@ const App = (): JSX.Element => {
 					<Route path="/salesList/:id" element={<SalesProductDetail />} />
 					<Route path="/soldList/:id" element={<SoldProductDetail />} />
 					<Route path="/friend" element={<FriendPage />} />
+					<Route path="/friend/:id" element={<FriendDetail />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
