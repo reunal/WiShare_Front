@@ -79,3 +79,57 @@ export const DetailBtnGroup = styled.div`
 		border: solid 1px #e5e5e5;
 	}
 `;
+
+export const StyledModalBox = styled.div`
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 40%;
+	height: 60%;
+	overflow: auto;
+	padding-top: 20px;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	border: '2px solid #000';
+`;
+
+export const StyledFriendList = styled.div`
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+`;
+
+export const StyledPresentFriendCard = styled.div`
+	width: 100%;
+	border: solid 1px #e5e5e5;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+
+	div {
+		float: left;
+		padding: 10px 5px;
+	}
+
+	div:nth-child(2) {
+		margin-top: 15px;
+	}
+
+	div:last-child {
+		float: right;
+		margin-top: 5px;
+		margin-right: 10px;
+	}
+
+	img {
+		width: 50px;
+		border-radius: 50%;
+		border: solid 1px #c8c8c8;
+	}
+
+	h5 {
+		font-size: 20px;
+	}
+`;
