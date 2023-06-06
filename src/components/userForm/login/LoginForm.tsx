@@ -24,8 +24,8 @@ const LoginForm = (): JSX.Element => {
 	);
 
 	const onSubmit = () => {
-		console.log('id: ', id);
-		console.log('pw: ', pw);
+		window.console.log('id: ', id);
+		window.console.log('pw: ', pw);
 	};
 
 	return (

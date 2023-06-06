@@ -3,12 +3,12 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import WestIcon from '@material-ui/icons/ArrowBack';
 import { Grid, Modal } from '@mui/material';
 import noImage from '../../asset/images/noImage.jpeg';
+import { Back } from '../../styles/CommonStyled';
 import {
 	DetailImage,
 	DetailContent,
 	DetailUnderLine,
 	DetailBtnGroup,
-	Back,
 	StyledModalBox,
 	StyledFriendList,
 	StyledPresentFriendCard,
@@ -91,7 +91,7 @@ const ProductDetail = () => {
 			<Grid item xs={4}>
 				<Back>
 					<button type="button" onClick={onBack}>
-						<WestIcon /> 목록
+						<WestIcon />
 					</button>
 				</Back>
 				<DetailImage>
