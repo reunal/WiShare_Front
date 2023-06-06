@@ -137,7 +137,7 @@ export const StyledProductRegisterLabel = styled.label`
 	width: 100%;
 	height: 45px;
 	padding: 0 15px;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
 
 	font-size: 16px;
@@ -179,5 +179,18 @@ export const StyledProductRegisterSelect = styled.select`
 	:focus {
 		outline: none;
 		border-bottom: solid 1px #c8c8c8;
+	}
+`;
+
+export const StyledProductRegisterButton = styled.button`
+	width: 100px;
+	padding: 8px 20px;
+	background: #ff5555;
+	color: white;
+	border-radius: 30px;
+	font-size: 12px;
+
+	&:hover {
+		background: #fa4158;
 	}
 `;
