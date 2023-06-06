@@ -1,20 +1,18 @@
 import React from 'react';
+// import { useRecoilState } from 'recoil';
 import { CardBaseStyle, ProductCardStyle } from '../../styles/CommonStyled';
 import noImage from '../../asset/images/noImage.jpeg';
-
-interface IProductType {
-	id: number;
-	img: string;
-	name: string;
-	brand: string;
-	price: number;
-	description: string;
-	wished: boolean;
-	inventory: number;
-}
+import { IProductType } from '../../recoil/ProductAtom';
+// import { myWishListState } from '../../recoil/WishItemAtom';
 
 const Product = (data: IProductType) => {
+	// const [wishList, setWishList] = useRecoilState<IProductType[]>(myWishListState);
+
 	const { name, brand, price } = data;
+
+	// const addWish = (e: any) => {
+	// 	e.preventDefault();
+	// };
 
 	return (
 		<CardBaseStyle>

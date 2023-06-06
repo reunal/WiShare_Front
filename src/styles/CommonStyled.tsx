@@ -4,6 +4,10 @@ interface SmallTitleTextProps {
 	weight?: number;
 }
 
+interface Itop {
+	top?: string;
+}
+
 export const PageTitleHead = styled.div`
 	display: inline-block;
 	width: 100%;
@@ -61,6 +65,7 @@ export const ProductCardStyle = styled.div`
 	img {
 		width: 100%;
 		height: 250px;
+		border-bottom: solid 1px #e5e5e5;
 	}
 
 	div {
@@ -207,5 +212,24 @@ export const StyledDetailItemInfo = styled.div`
 		h6 {
 			text-align: center;
 		}
+	}
+`;
+
+export const UnderLineW100 = styled.div`
+	width: 100%;
+	height: 1px;
+	background: #e5e5e5;
+
+	margin-top: ${({ top }: Itop) => {
+		return top || '0px';
+	}};
+`;
+
+export const Back = styled.div`
+	width: 100%;
+	margin-top: 50px;
+
+	svg {
+		font-size: 1.5rem;
 	}
 `;

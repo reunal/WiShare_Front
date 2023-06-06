@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Grid } from '@mui/material';
 
 export const StyledFriend = styled.div`
 	margin-top: 50px;
@@ -83,5 +84,73 @@ export const FriendRequestCard = styled.div`
 	button {
 		margin-top: 20px;
 		margin-left: 15px;
+	}
+`;
+
+// friendDetail
+export const StyledFriendDetail = styled.div`
+	text-align: center;
+
+	p {
+		color: #666;
+		font-size: 14px;
+	}
+`;
+
+export const StyledFriendDetailUser = styled.div`
+	width: 100%;
+	text-align: center;
+
+	img {
+		width: 130px;
+		height: 130px;
+		border-radius: 50%;
+		border: solid 1px #c8c8c8;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		margin-top: 10px;
+	}
+
+	p {
+		color: #666;
+		font-size: 0.8rem;
+	}
+`;
+
+export const FriendWishTitle = styled.div`
+	width: 100%;
+	text-align: center;
+	padding: 25px 0;
+	font-weight: bold;
+
+	p {
+		font-size: 16px;
+		color: #333;
+	}
+`;
+
+export const FriendWishList = styled(Grid)``;
+
+export const FriendsWishItem = styled.div`
+	width: 100%;
+	height: 250px;
+	background: #e5e5e5;
+	text-align: center;
+	line-height: 250px;
+`;
+
+export const FriendDelBtn = styled.div`
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+
+	button {
+		padding: 10px 20px;
+		background: #ff5555;
+		color: #fff;
+		font-size: 11px;
+		border-radius: 50px;
 	}
 `;

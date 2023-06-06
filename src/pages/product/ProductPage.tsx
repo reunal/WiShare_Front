@@ -1,12 +1,15 @@
 import React from 'react';
+import { useRecoilValue } from 'recoil';
 import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { PageTitleKr, PageBody, PageTitleHead } from '../../styles/CommonStyled';
-import ProductDummyData from '../../model/ProductDummyData';
 import FilterBtn from '../../components/productList/FilterBtn';
 import Product from '../../components/productList/Product';
+import { ProductAtom } from '../../recoil/ProductAtom';
 
 const ProductPage = (): JSX.Element => {
+	const productData = useRecoilValue(ProductAtom);
+
 	return (
 		<>
 			<PageTitleHead>
@@ -15,7 +18,7 @@ const ProductPage = (): JSX.Element => {
 			</PageTitleHead>
 			<PageBody>
 				<Grid container spacing={2}>
-					{ProductDummyData.map((data) => {
+					{productData.map((data) => {
 						const { id, img, name, brand, price, description, wished, inventory } = data;
 						return (
 							<Grid item xs={3}>

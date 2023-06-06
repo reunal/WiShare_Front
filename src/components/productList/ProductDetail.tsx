@@ -3,7 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import WestIcon from '@material-ui/icons/ArrowBack';
 import { Grid } from '@mui/material';
 import noImage from '../../asset/images/noImage.jpeg';
-import { DetailImage, DetailContent, DetailUnderLine, DetailBtnGroup, Back } from '../../styles/product/StyledProduct';
+import { DetailImage, DetailContent, DetailUnderLine, DetailBtnGroup } from '../../styles/product/StyledProduct';
+import { Back } from '../../styles/CommonStyled';
 
 const ProductDetail = () => {
 	const location = useLocation();
@@ -22,7 +23,7 @@ const ProductDetail = () => {
 			<Grid item xs={4}>
 				<Back>
 					<button type="button" onClick={onBack}>
-						<WestIcon /> 목록
+						<WestIcon />
 					</button>
 				</Back>
 				<DetailImage>

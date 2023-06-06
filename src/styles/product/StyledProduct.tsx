@@ -12,14 +12,6 @@ export const FilterSelector = styled.select`
 `;
 
 // 제품 상세보기 페이지
-export const Back = styled.div`
-	width: 100%;
-	margin-top: 50px;
-
-	svg {
-		font-size: 1rem;
-	}
-`;
 
 export const DetailImage = styled.div`
 	width: 100%;
