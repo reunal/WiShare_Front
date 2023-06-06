@@ -4,21 +4,10 @@ import { Link } from 'react-router-dom';
 import { BrandText, CardBaseStyle, NameText, SmallTitleText } from '../../styles/CommonStyled';
 import logo from '../../logo.svg';
 import { StyledSalesProductCard } from '../../styles/market/StyledMarket';
+import { IProductType } from '../../recoil/ProductAtom';
 
-interface ISoldProductType {
-	id: number;
-	name: string;
-	brand: string;
-	category: string;
-	price: number;
-	quantity: number;
-	orderNumber: number;
-	viewCnt: number;
-	like: number;
-}
-
-const SalesProduct = (data: ISoldProductType) => {
-	const { id, name, price, quantity } = data;
+const SalesProduct = (data: IProductType) => {
+	const { id, name, price, inventory } = data;
 	return (
 		<Grid item xs={4}>
 			<CardBaseStyle>
@@ -30,7 +19,7 @@ const SalesProduct = (data: ISoldProductType) => {
 							<NameText>{price}</NameText>
 						</div>
 						<div>
-							<BrandText>남은 재고 : {quantity}ea</BrandText>
+							<BrandText>남은 재고 : {inventory}ea</BrandText>
 						</div>
 					</StyledSalesProductCard>
 				</Link>
