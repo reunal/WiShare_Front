@@ -14,7 +14,9 @@ const Header = (): JSX.Element => {
 				<Grid container>
 					{/* Logo */}
 					<Grid item xs={2}>
-						<Logo>WISHARE</Logo>
+						<Link to="/" aria-label="마켓">
+							<Logo>WISHARE</Logo>
+						</Link>
 					</Grid>
 
 					{/* Menu */}

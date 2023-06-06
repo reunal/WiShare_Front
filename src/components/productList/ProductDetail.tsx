@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import WestIcon from '@material-ui/icons/ArrowBack';
 import { Grid, Modal } from '@mui/material';
+import { useRecoilValue } from 'recoil';
 import noImage from '../../asset/images/noImage.jpeg';
-import { Back } from '../../styles/CommonStyled';
+import { Back, NameText } from '../../styles/CommonStyled';
 import {
 	DetailImage,
 	DetailContent,
@@ -13,8 +14,7 @@ import {
 	StyledFriendList,
 	StyledPresentFriendCard,
 } from '../../styles/product/StyledProduct';
-import { NameText } from '../../styles/CommonStyled';
-import FriendDummyData from '../../model/FriendDummyData';
+import { FriendList, IFriendType } from '../../recoil/FriendAtom';
 
 declare global {
 	interface Window {
@@ -31,6 +31,7 @@ const ProductDetail = () => {
 	const data = location.state?.data;
 	const navigate = useNavigate();
 	const [isVisible, setIsVisible] = useState(false);
+	const Friends = useRecoilValue<IFriendType[]>(FriendList);
 
 	useEffect(() => {
 		const jquery = document.createElement('script');
@@ -122,9 +123,9 @@ const ProductDetail = () => {
 					<StyledModalBox>
 						<NameText>선물할 친구를 선택해주세요</NameText>
 						<StyledFriendList>
-							{FriendDummyData.filter((item) => {
+							{Friends.filter((item: IFriendType) => {
 								return item.friendActive === true;
-							}).map((item) => {
+							}).map((item: IFriendType) => {
 								return (
 									<StyledPresentFriendCard>
 										<div>
