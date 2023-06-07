@@ -127,7 +127,7 @@ const ProductDetail = () => {
 			onChangeProductList();
 			onInsertSoldProductList();
 			alert('결제 성공');
-			onBack();
+			navigate('/');
 		} else {
 			alert(`결제 실패:`);
 		}
@@ -136,6 +136,8 @@ const ProductDetail = () => {
 	const { name, brand, price, inventory } = data;
 
 	const onPayment = (user: IUserType) => {
+		if (!window.confirm(`${user.name}에게 선물하시겠습니까?`)) return;
+
 		const { IMP } = window;
 		IMP.init('imp40654317');
 
