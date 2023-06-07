@@ -65,8 +65,11 @@ const ProductRegisterForm = () => {
 			/>
 			<SmallNameText>카테고리</SmallNameText>
 			<StyledProductRegisterSelect name="category" value={content.category} onChange={onChangeContent}>
-				<option value="cloth">의류</option>
 				<option value="hat">모자</option>
+				<option value="cloth">옷</option>
+				<option value="accessory">악세사리</option>
+				<option value="food">음식</option>
+				<option value="drink">음료수</option>
 			</StyledProductRegisterSelect>
 			<SmallNameText>브랜드</SmallNameText>
 			<StyledProductRegisterInput

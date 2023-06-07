@@ -1,14 +1,26 @@
 import React from 'react';
-import { useRecoilValue } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { PageTitleKr, PageBody, PageTitleHead } from '../../styles/CommonStyled';
 import FilterBtn from '../../components/productList/FilterBtn';
 import Product from '../../components/productList/Product';
-import { ProductAtom } from '../../recoil/ProductAtom';
+import { IProductType, ProductAtom } from '../../recoil/ProductAtom';
 
 const ProductPage = (): JSX.Element => {
 	const productData = useRecoilValue(ProductAtom);
+	const [, setProduct] = useRecoilState<IProductType[]>(ProductAtom);
+
+	const onChangeViewCnt = (productId: number) => {
+		setProduct((prevProduct) => {
+			return prevProduct.map((item) => {
+				if (item.id === productId) {
+					return { ...item, viewCnt: (item.viewCnt || 0) + 1 };
+				}
+				return item;
+			});
+		});
+	};
 
 	return (
 		<>
@@ -22,7 +34,13 @@ const ProductPage = (): JSX.Element => {
 						const { id, img, name, brand, price, description, wished, inventory } = data;
 						return (
 							<Grid item xs={3}>
-								<Link to={`/product/${id}`} state={{ data }}>
+								<Link
+									to={`/product/${id}`}
+									state={{ data }}
+									onClick={() => {
+										return onChangeViewCnt(id);
+									}}
+								>
 									<Product
 										key={id}
 										id={id}
