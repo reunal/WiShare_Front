@@ -1,7 +1,7 @@
 const ProductDummyData = [
 	{
 		id: 1,
-		img: '',
+		img: '/images/mlbcap.jpg',
 		name: 'MLB 모자',
 		brand: 'MLB',
 		category: '모자',
@@ -16,7 +16,7 @@ const ProductDummyData = [
 	},
 	{
 		id: 2,
-		img: '',
+		img: '/images/mlbshirt.jpg',
 		name: 'MLB 후드티',
 		brand: 'MLB',
 		category: '옷',
@@ -31,7 +31,7 @@ const ProductDummyData = [
 	},
 	{
 		id: 3,
-		img: '',
+		img: '/images/airpod3.jpeg',
 		name: 'AirPod Pro3',
 		brand: 'APPLE',
 		category: '악세사리',
@@ -46,7 +46,7 @@ const ProductDummyData = [
 	},
 	{
 		id: 4,
-		img: '',
+		img: '/images/hal.jpg',
 		name: '까스활명수',
 		brand: 'COOPSKET',
 		category: '음료수',
@@ -61,7 +61,7 @@ const ProductDummyData = [
 	},
 	{
 		id: 5,
-		img: '',
+		img: '/images/starbucks.jpeg',
 		name: '스타벅스 아메리카노',
 		brand: 'STARBUCKS',
 		category: '음료수',
@@ -76,7 +76,7 @@ const ProductDummyData = [
 	},
 	{
 		id: 6,
-		img: '',
+		img: '/images/bbq.jpg',
 		name: 'BBQ 후라이드 치킨',
 		brand: 'BBQ',
 		category: '음식',

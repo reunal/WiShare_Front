@@ -1,4 +1,6 @@
 import React, { useState, ChangeEvent } from 'react';
+import { useRecoilState } from 'recoil';
+import { useNavigate } from 'react-router-dom';
 import { SmallNameText } from '../../styles/CommonStyled';
 import {
 	StyledProductRegisterButton,
@@ -7,24 +9,30 @@ import {
 	StyledProductRegisterLabel,
 	StyledProductRegisterSelect,
 } from '../../styles/market/StyledMarket';
+import { IProductType, ProductAtom } from '../../recoil/ProductAtom';
 
 interface IEventType extends ChangeEvent<HTMLInputElement | HTMLSelectElement> {
 	target: HTMLInputElement | HTMLSelectElement;
 }
 
 const ProductRegisterForm = () => {
+	const [, setProductLists] = useRecoilState<IProductType[]>(ProductAtom);
 	const [content, setContent] = useState({
+		id: 0,
 		img: '',
 		name: '',
 		brand: '',
 		category: '',
 		price: 0,
-		quantity: 10,
+		description: '',
+		wished: false,
+		inventory: 5,
 		viewCnt: 0,
 		like: 0,
 		entered: false,
 		date: '2023-05-07',
 	});
+	const navigate = useNavigate();
 
 	const onChangeContent = (e: IEventType) => {
 		setContent({
@@ -43,7 +51,12 @@ const ProductRegisterForm = () => {
 		}
 	};
 
-	const onSubmit = () => {};
+	const onSubmit = () => {
+		setProductLists((prevProductList) => {
+			return [...prevProductList, content];
+		});
+		navigate(-1);
+	};
 
 	return (
 		<StyledProductRegisterForm>
@@ -83,8 +96,8 @@ const ProductRegisterForm = () => {
 			<StyledProductRegisterInput
 				type="text"
 				placeholder="재고량"
-				name="quantity"
-				value={content.quantity}
+				name="inventory"
+				value={content.inventory}
 				onChange={onChangeContent}
 			/>
 			<SmallNameText>이미지</SmallNameText>

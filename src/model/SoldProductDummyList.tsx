@@ -1,7 +1,7 @@
 const SoldDummyData = [
 	{
 		id: 1,
-		img: '',
+		img: '/images/mlbcap.jpg',
 		name: 'MLB 모자',
 		brand: 'MLB',
 		category: '모자',
@@ -17,7 +17,7 @@ const SoldDummyData = [
 	},
 	{
 		id: 2,
-		img: '',
+		img: '/images/mlbshirt.jpg',
 		name: 'MLB 후드티',
 		brand: 'MLB',
 		category: '옷',

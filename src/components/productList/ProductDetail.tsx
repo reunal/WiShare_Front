@@ -134,16 +134,16 @@ const ProductDetail = () => {
 		}
 	}
 
-	const { name, brand, price, inventory } = data;
+	const { name, brand, img, price, inventory } = data;
 
-	const onPayment = (user: IUserType) => {
+	const onPayment = (user: IUserType, company: string) => {
 		if (!window.confirm(`${user.name}에게 선물하시겠습니까?`)) return;
 
 		const { IMP } = window;
 		IMP.init('imp40654317');
 
 		const payment = {
-			pg: 'html5_inicis', // PG사 (필수항목)
+			pg: company, // PG사 (필수항목)
 			pay_method: 'card', // 결제수단 (필수항목)
 			merchant_uid: `mid_${new Date().getTime()}`, // 결제금액 (필수항목)
 			name, // 주문명 (필수항목)
@@ -168,7 +168,7 @@ const ProductDetail = () => {
 					</button>
 				</Back>
 				<DetailImage>
-					<img src={noImage} alt="" />
+					<img src={`${process.env.PUBLIC_URL}${img}`} alt="" />
 				</DetailImage>
 			</Grid>
 			<Grid item xs={4}>
@@ -212,10 +212,18 @@ const ProductDetail = () => {
 											<button
 												type="button"
 												onClick={() => {
-													return onPayment(item);
+													return onPayment(item, 'html5_inicis');
 												}}
 											>
 												선물하기
+											</button>
+											<button
+												type="button"
+												onClick={() => {
+													return onPayment(item, 'kakaopay');
+												}}
+											>
+												카카오페이
 											</button>
 										</DetailBtnGroup>
 									</StyledPresentFriendCard>

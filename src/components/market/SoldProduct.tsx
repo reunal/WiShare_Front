@@ -9,18 +9,17 @@ import {
 	StyledSoldProductContent,
 	StyledInvoiceInputButton,
 } from '../../styles/market/StyledMarket';
-import noImage from '../../asset/images/noImage.jpeg';
 import { BrandText, NameText } from '../../styles/CommonStyled';
 import { ISoldProductType } from '../../recoil/SoldProductAtom';
 
 const SoldProduct = (data: ISoldProductType) => {
-	const { id, name, brand, quantity, orderNumber, addressNumber, entered, date } = data;
+	const { id, name, img, brand, quantity, orderNumber, addressNumber, entered, date } = data;
 	return (
 		<StyledSoldProductCard>
 			<p>{date}</p>
 			<Grid container spacing={3}>
 				<Grid item xs={2}>
-					<img src={noImage} alt={name} />
+					<img src={`${process.env.PUBLIC_URL}${img}`} alt={name} />
 				</Grid>
 				<Grid item xs={10}>
 					<StyledProductItem>

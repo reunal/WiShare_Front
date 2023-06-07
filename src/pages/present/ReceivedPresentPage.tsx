@@ -6,6 +6,7 @@ import { ReceivedListContainer } from '../../styles/present/StyledPresent';
 const data = [
 	{
 		id: 1,
+		img: '/images/mlbcap.jpg',
 		brand: 'MLB',
 		title: 'MLB 캡 모자',
 		sender: '홍길동',
@@ -13,6 +14,7 @@ const data = [
 	},
 	{
 		id: 2,
+		img: '/images/mul.jpg',
 		brand: '삼다수',
 		title: '삼다수 2L * 24',
 		sender: '홍길동',
@@ -20,6 +22,7 @@ const data = [
 	},
 	{
 		id: 3,
+		img: '/images/choco.jpg',
 		brand: '허쉬',
 		title: '허쉬초콜릿',
 		sender: '홍길동',
@@ -27,6 +30,7 @@ const data = [
 	},
 	{
 		id: 4,
+		img: '/images/coffee.jpeg',
 		brand: '네스프레소',
 		title: '네스프래소 캡슐',
 		sender: '홍길동',

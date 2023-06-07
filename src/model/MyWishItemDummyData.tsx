@@ -1,7 +1,7 @@
 const MyWishItemDummyData = [
 	{
 		id: 1,
-		img: '',
+		img: '/images/mlbcap.jpg',
 		name: 'MLB 모자',
 		brand: 'MLB',
 		price: 39000,
@@ -11,7 +11,7 @@ const MyWishItemDummyData = [
 	},
 	{
 		id: 3,
-		img: '',
+		img: '/images/airpod3.jpeg',
 		name: 'AirPod Pro3',
 		brand: 'APPLE',
 		price: 200000,
@@ -21,7 +21,7 @@ const MyWishItemDummyData = [
 	},
 	{
 		id: 5,
-		img: '',
+		img: '/images/starbucks.jpeg',
 		name: '스타벅스 아메리카노',
 		brand: 'STARBUCKS',
 		price: 4500,
@@ -31,7 +31,7 @@ const MyWishItemDummyData = [
 	},
 	{
 		id: 6,
-		img: '',
+		img: '/images/bbq.jpg',
 		name: 'BBQ 후라이드 치킨',
 		brand: 'BBQ',
 		price: 20000,

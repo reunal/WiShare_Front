@@ -4,15 +4,13 @@ import WestIcon from '@material-ui/icons/ArrowBack';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { BrandText, NameText, SmallTitleText, StyledDetailCard, StyledDetailItemInfo } from '../../styles/CommonStyled';
 import { StyledDetailItemData, StyledMarket } from '../../styles/market/StyledMarket';
-import logo from '../../logo.svg';
 
 const SalesProductDetail = () => {
 	const location = useLocation();
 	const data = location.state?.data;
 	const navigate = useNavigate();
 
-	const { name, brand, category, price, quantity, viewCnt, like } = data;
-	console.log(data);
+	const { name, brand, img, category, price, quantity, viewCnt, like } = data;
 	const onBack = () => {
 		navigate(-1);
 	};
@@ -27,7 +25,7 @@ const SalesProductDetail = () => {
 							<WestIcon /> 목록
 						</button>
 						<StyledDetailItemInfo>
-							<img src={logo} alt="" title="" />
+							<img src={`${process.env.PUBLIC_URL}${img}`} alt="" title="" />
 							<div>
 								<BrandText>{brand}</BrandText>
 								<NameText>{name}</NameText>

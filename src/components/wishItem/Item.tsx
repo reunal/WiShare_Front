@@ -4,13 +4,12 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { useRecoilState } from 'recoil';
 import { StyledWishItem, StyledItemInfo, StyledButtons } from '../../styles/wishItem/StyledWishItem';
-import noImage from '../../asset/images/noImage.jpeg';
 import { IWishItemType, myWishListState } from '../../recoil/WishItemAtom';
 
 const Item = (data: IWishItemType) => {
 	const [wishItems, setWishItems] = useRecoilState<IWishItemType[]>(myWishListState);
-	const { id, name, brand, price } = data;
-
+	const { id, name, img, brand, price } = data;
+	console.log(img);
 	function removeWishItemWithId(arr: IWishItemType[], index: number): IWishItemType[] {
 		console.log(index);
 		return [...arr.slice(0, index), ...arr.slice(index + 1)];
@@ -31,7 +30,7 @@ const Item = (data: IWishItemType) => {
 				<Grid item xs={10}>
 					<StyledItemInfo>
 						<div>
-							<img src={noImage} alt="no_image" title="" />
+							<img src={`${process.env.PUBLIC_URL}${img}`} alt="no_image" title="" />
 						</div>
 						<div>
 							<h6>{name}</h6>
