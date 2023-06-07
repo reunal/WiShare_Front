@@ -16,6 +16,8 @@ import {
 } from '../../styles/product/StyledProduct';
 import { FriendList, IFriendType } from '../../recoil/FriendAtom';
 import { IWishItemType, myWishListState } from '../../recoil/WishItemAtom';
+import { ISoldProductType, SoldProductList } from '../../recoil/SoldProductAtom';
+import { IProductType, ProductAtom } from '../../recoil/ProductAtom';
 
 declare global {
 	interface Window {
@@ -34,6 +36,8 @@ const ProductDetail = () => {
 	const [isVisible, setIsVisible] = useState(false);
 	const Friends = useRecoilValue<IFriendType[]>(FriendList);
 	const [wishList, setWishList] = useRecoilState<IWishItemType[]>(myWishListState);
+	const [, setProductList] = useRecoilState<IProductType[]>(ProductAtom);
+	const [soldProductLists, setSoldProductLists] = useRecoilState<ISoldProductType[]>(SoldProductList);
 
 	useEffect(() => {
 		const jquery = document.createElement('script');
@@ -79,11 +83,51 @@ const ProductDetail = () => {
 		}
 	};
 
+	const onChangeProductList = () => {
+		setProductList((prevProduct) => {
+			return prevProduct.map((item) => {
+				if (item.id === data.id) {
+					return {
+						...item,
+						inventory: data.inventory - 1,
+					};
+				}
+				return item;
+			});
+		});
+	};
+
+	const onInsertSoldProductList = () => {
+		const newItem: ISoldProductType = {
+			id: soldProductLists.length + 1,
+			img: data.img,
+			name: data.name,
+			brand: data.brand,
+			category: data.category,
+			price: data.price,
+			description: data.description,
+			quantity: 1,
+			purchaser: '모유진',
+			address: '경상북도 구미시 대학로 61 금오공과대학교',
+			addressNumber: '',
+			orderNumber: 312655,
+			entered: false,
+			date: '2023-05-07',
+		};
+
+		setSoldProductLists((prevWishList) => {
+			return [...prevWishList, newItem];
+		});
+	};
+
 	function callback(response: any) {
 		const { success } = response;
 
 		if (success) {
+			onChangeProductList();
+			onInsertSoldProductList();
 			alert('결제 성공');
+			onBack();
 		} else {
 			alert(`결제 실패:`);
 		}
@@ -102,8 +146,8 @@ const ProductDetail = () => {
 			name, // 주문명 (필수항목)
 			amount: price, // 금액 (필수항목)
 			custom_data: { name: user.name, desc: '세부 부가정보' },
-			buyer_email: '',
-			buyer_name: user.name,
+			buyer_email: 'scab12341@gmail.com',
+			buyer_name: '모유진',
 			buyer_tel: '010-1234-5678',
 			buyer_addr: '서울특별시 강남구 삼성동',
 			buyer_postcode: '123-456',

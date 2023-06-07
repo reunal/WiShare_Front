@@ -1,20 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Divider, Grid } from '@material-ui/core';
 import WestIcon from '@material-ui/icons/ArrowBack';
+import { useRecoilState } from 'recoil';
 import { StyledDetailItemData, StyledMarket } from '../../styles/market/StyledMarket';
 import { BrandText, NameText, SmallTitleText, StyledDetailCard, StyledDetailItemInfo } from '../../styles/CommonStyled';
 import logo from '../../logo.svg';
+import { ISoldProductType, SoldProductList } from '../../recoil/SoldProductAtom';
 
 const SoldProductDetail = () => {
 	const location = useLocation();
 	const data = location.state?.data;
 	const navigate = useNavigate();
+	const [inputNumber, setInputNumber] = useState('');
+	const [, setSoldProduct] = useRecoilState<ISoldProductType[]>(SoldProductList);
 
-	const { name, brand, price, quantity, purchaser, address, orderNumber } = data;
+	const { id, name, brand, price, quantity, purchaser, address, addressNumber, orderNumber } = data;
 
 	const onBack = () => {
 		navigate(-1);
+	};
+
+	const onChangeAddressNumber = () => {
+		setSoldProduct((prevProduct) => {
+			return prevProduct.map((item) => {
+				if (item.id === id) {
+					return {
+						...item,
+						addressNumber: inputNumber,
+						entered: true,
+					};
+				}
+				return item;
+			});
+		});
+		onBack();
 	};
 
 	return (
@@ -69,8 +89,22 @@ const SoldProductDetail = () => {
 							<Divider />
 							<div>
 								<p>송장번호</p>
-								<p>00000000</p>
-								<button type="button">번호입력</button>
+								{addressNumber === '' ? (
+									<>
+										<input
+											type="text"
+											value={inputNumber}
+											onChange={(e) => {
+												return setInputNumber(e.target.value);
+											}}
+										/>
+										<button type="button" onClick={onChangeAddressNumber}>
+											번호입력
+										</button>
+									</>
+								) : (
+									<p>{addressNumber}</p>
+								)}
 							</div>
 							<Divider />
 						</StyledDetailItemData>

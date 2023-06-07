@@ -11,23 +11,10 @@ import {
 } from '../../styles/market/StyledMarket';
 import noImage from '../../asset/images/noImage.jpeg';
 import { BrandText, NameText } from '../../styles/CommonStyled';
-
-interface ISoldProductType {
-	id: number;
-	name: string;
-	brand: string;
-	price: number;
-	quantity: number;
-	purchaser: string;
-	address: string;
-	orderNumber: number;
-	entered: boolean;
-	date: string;
-}
+import { ISoldProductType } from '../../recoil/SoldProductAtom';
 
 const SoldProduct = (data: ISoldProductType) => {
-	const { id, name, brand, quantity, orderNumber, entered, date } = data;
-
+	const { id, name, brand, quantity, orderNumber, addressNumber, entered, date } = data;
 	return (
 		<StyledSoldProductCard>
 			<p>{date}</p>
@@ -58,9 +45,11 @@ const SoldProduct = (data: ISoldProductType) => {
 						<Grid item xs={2}>
 							<StyledSoldProductContent>
 								<Divider orientation="vertical" flexItem />
-								<Link to={`/soldList/${id}`} state={{ data }}>
-									<StyledInvoiceInputButton>입력하기</StyledInvoiceInputButton>
-								</Link>
+								{addressNumber === '' ? (
+									<Link to={`/soldList/${id}`} state={{ data }}>
+										<StyledInvoiceInputButton>입력하기</StyledInvoiceInputButton>
+									</Link>
+								) : null}
 							</StyledSoldProductContent>
 						</Grid>
 					</StyledProductItem>
