@@ -87,6 +87,13 @@ export const FriendRequestCard = styled.div`
 	}
 `;
 
+export const StyledFriendSearch = styled.input`
+	width: 100%;
+	padding: 15px 10px;
+	border: solid 1px #e5e5e5;
+	border-radius: 5px;
+`;
+
 // friendDetail
 export const StyledFriendDetail = styled.div`
 	text-align: center;
