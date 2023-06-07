@@ -24,7 +24,7 @@ const Friend = ({ data }: FriendProps) => {
 	});
 
 	const onClickDelete = (): void => {
-		// const confirm = window.confirm('정말 친구삭제하시겠습니까?');
+		if (!window.confirm('정말 친구삭제하시겠습니까?')) return;
 
 		const newList = removeFriendWithId(Friends, findIndex);
 		setFriends(newList);
