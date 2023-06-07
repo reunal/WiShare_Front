@@ -1,6 +1,7 @@
 import { atom } from 'recoil';
+import MyWishItemDummyData from '../model/MyWishItemDummyData';
 
-export interface IProductType {
+export interface IWishItemType {
 	id: number;
 	img: string;
 	name: string;
@@ -8,10 +9,10 @@ export interface IProductType {
 	price: number;
 	description: string;
 	wished: boolean;
-	inventory: number;
+	open: boolean;
 }
 
-export const myWishListState = atom<IProductType[]>({
+export const myWishListState = atom<IWishItemType[]>({
 	key: 'wishList',
-	default: [],
+	default: MyWishItemDummyData,
 });

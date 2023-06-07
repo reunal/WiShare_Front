@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import WestIcon from '@material-ui/icons/ArrowBack';
 import { Grid, Modal } from '@mui/material';
-import { useRecoilValue } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import noImage from '../../asset/images/noImage.jpeg';
 import { Back, NameText } from '../../styles/CommonStyled';
 import {
@@ -15,6 +15,7 @@ import {
 	StyledPresentFriendCard,
 } from '../../styles/product/StyledProduct';
 import { FriendList, IFriendType } from '../../recoil/FriendAtom';
+import { IWishItemType, myWishListState } from '../../recoil/WishItemAtom';
 
 declare global {
 	interface Window {
@@ -32,6 +33,7 @@ const ProductDetail = () => {
 	const navigate = useNavigate();
 	const [isVisible, setIsVisible] = useState(false);
 	const Friends = useRecoilValue<IFriendType[]>(FriendList);
+	const [wishList, setWishList] = useRecoilState<IWishItemType[]>(myWishListState);
 
 	useEffect(() => {
 		const jquery = document.createElement('script');
@@ -52,6 +54,29 @@ const ProductDetail = () => {
 
 	const onBack = () => {
 		navigate(-1);
+	};
+
+	const onInsertWishList = () => {
+		const newItem: IWishItemType = {
+			id: wishList.length + 1,
+			img: data.img,
+			name: data.name,
+			brand: data.brand,
+			price: data.price,
+			description: data.description,
+			wished: false,
+			open: true,
+		};
+
+		const isDuplicate = wishList.some((item) => {
+			return item.name === newItem.name;
+		});
+
+		if (!isDuplicate) {
+			setWishList((prevWishList) => {
+				return [...prevWishList, newItem];
+			});
+		}
 	};
 
 	function callback(response: any) {
@@ -108,7 +133,9 @@ const ProductDetail = () => {
 					<DetailUnderLine />
 					<div>{inventory <= 10 ? <p>{inventory.toLocaleString()} 개 남았습니다!</p> : ''}</div>
 					<DetailBtnGroup>
-						<button type="button">위시하기</button>
+						<button type="button" onClick={onInsertWishList}>
+							위시하기
+						</button>
 						<button type="button" onClick={onChangeModal}>
 							선물하기
 						</button>
