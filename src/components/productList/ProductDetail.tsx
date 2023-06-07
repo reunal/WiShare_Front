@@ -81,6 +81,7 @@ const ProductDetail = () => {
 				return [...prevWishList, newItem];
 			});
 		}
+		onBack();
 	};
 
 	const onChangeProductList = () => {
